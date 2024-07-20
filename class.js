@@ -11,13 +11,14 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 var _Student_id;
+Object.defineProperty(exports, "__esModule", { value: true });
+// import * as UserLogin from './interface'
 class Employee {
 }
 let john = new Employee();
 john.id = 1;
 john.name = "John";
 john.address = "Germany";
-// console.log(john);
 class Student {
     get stdId() {
         return __classPrivateFieldGet(this, _Student_id, "f");
@@ -34,13 +35,20 @@ class Student {
         this.name = name;
         this.address = address;
     }
+    Login() {
+        return {
+            name: 'rohan',
+            id: 3,
+            email: 'rohan@gmail.com',
+        };
+    }
     getNameWithAddress() {
         // return this.name + " " + this.address
         return `${this.name} stays at ${this.address} who's id is ${__classPrivateFieldGet(this, _Student_id, "f")}`;
     }
 }
 _Student_id = new WeakMap();
-let ram = new Student(1, 'Ram', 'Ayodhya');
+let ram = new Student(1, 'Ram', { street: "abc", state: 'maharashtra', city: 'nagpur', pin: 440002 });
 // Student.getEmployeeCount()
 ram.stdId = 5;
 console.log(ram.stdId);
@@ -52,5 +60,5 @@ class Manager extends Student {
         super(id, name, address);
     }
 }
-let mike = new Manager(2, 'Tison', 'Tokyo');
-// console.log(mike.getNameWithAddress());
+let mike = new Manager(2, 'Tison', { city: 'pune', street: 'higway 3', state: 'maharashtra', pin: 552233 });
+console.log(mike);
