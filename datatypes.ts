@@ -45,4 +45,4 @@ function swapNumbers(num1: number, num2: number): [number, number] {
     return [num2, num1]
 }
 swapNum = swapNumbers(5, 4);
-console.log(swapNum[2]);
+// console.log(swapNum[2]);

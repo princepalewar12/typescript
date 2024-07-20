@@ -14,7 +14,7 @@ empList = ['name', 'email', 'password'];
 let stdList;
 stdList = [1, 2, 3, 4, 5];
 let abc = stdList[5];
-console.log(abc);
+// console.log(abc);
 let res1 = stdList.filter((num) => num > 2);
 // console.log(res1);
 let value = empList.find((str) => str === "name");
